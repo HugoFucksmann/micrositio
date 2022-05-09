@@ -1,6 +1,6 @@
 .body {
   min-height: 100vh;
-  overflow: hidden;
+
   margin-right: 12%;
   margin-left: 12%;
   padding: 30;
@@ -16,6 +16,4 @@
 }
 
 .header {
-  height: 9vh;
-  position: absolute;
 }
