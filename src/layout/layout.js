@@ -1,32 +1,28 @@
-import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import Header from "../header/header";
+import Landing from "../landing/landing";
 import "./layout.css";
 
-/* function getDataApi() {
-  try {
-    switch (window.location.pathname) {
-      case "/":
-        return <div id="home" />;
-      case "/cursos":
-        return <div id="cursos" />;
+const Layout = (props) => {
+  const { header, landing, footer } = props;
+  return (
+    <div>
+      <div className="header">{header}</div>
+      <div className="landing">{landing}</div>
+      <div className="body">{props.children}</div>
+      <div className="footer">{footer}</div>
+    </div>
+  );
+};
 
-      default:
-        return <div id="error" />;
-    }
-  } catch (error) {
-    console.log(error);
-    return null;
-  }
+Layout.propTypes = {
+  header: PropTypes.element.isRequired,
+  footer: PropTypes.element.isRequired,
+  landing: PropTypes.element,
+};
 
-  return [
-    { id: 1, name: "curso 1", desc: "este es la desc del curso 1" },
-    { id: 2, name: "curso 2", desc: "este es la desc del curso 2" },
-    { id: 3, name: "curso 3", desc: "este es la desc del curso 3" },
-    { id: 4, name: "curso 4", desc: "este es la desc del curso 4" },
-  ];
-} */
-
-function Layout(props) {
-  return <div className="body center">{props.children}</div>;
-}
+Layout.defaultProps = {
+  header: <Header />,
+};
 
 export default Layout;

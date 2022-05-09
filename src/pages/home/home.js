@@ -1,9 +1,13 @@
 import Layout from "../../layout/layout";
 
+const dataCard = ["uno", "dops", "tres", "cuantro"];
+
 const Home = () => {
   return (
     <Layout>
-      <div>HOME WEB</div>
+      {dataCard.map((data, i) => (
+        <div>Card {i}</div>
+      ))}
     </Layout>
   );
 };

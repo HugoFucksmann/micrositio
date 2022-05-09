@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import * as ReactDOMClient from "react-dom/client";
 import "./home.css";
 import "../bootstrap";
 import Layout from "../layout/layout";
